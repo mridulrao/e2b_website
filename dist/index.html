@@ -8,13 +8,34 @@
       name="description"
       content="A simple personal blog website with recent posts, featured writing, and ways to connect."
     />
+    <script>
+      (() => {
+        const storedTheme = localStorage.getItem('theme');
+        const theme =
+          storedTheme ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="hero">
       <nav class="site-nav">
         <span class="site-name">Mridul Rao</span>
-        <a href="#posts">Blog Posts</a>
+        <div class="nav-actions">
+          <a href="#posts">Blog Posts</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Activate dark mode"
+            aria-pressed="false"
+          >
+            Dark mode
+          </button>
+        </div>
       </nav>
       <div class="hero-copy">
         <p class="eyebrow">Voice AI Engineer</p>
@@ -76,5 +97,29 @@
       <p>© 2026 Simple Personal Website</p>
       <p>Built as a minimal static website for blog content.</p>
     </footer>
+
+    <script>
+      const themeToggle = document.querySelector('.theme-toggle');
+      const root = document.documentElement;
+
+      const syncThemeToggle = (theme) => {
+        const isDark = theme === 'dark';
+        themeToggle.textContent = isDark ? 'Light mode' : 'Dark mode';
+        themeToggle.setAttribute(
+          'aria-label',
+          isDark ? 'Activate light mode' : 'Activate dark mode'
+        );
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+      };
+
+      syncThemeToggle(root.dataset.theme || 'light');
+
+      themeToggle.addEventListener('click', () => {
+        const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = nextTheme;
+        localStorage.setItem('theme', nextTheme);
+        syncThemeToggle(nextTheme);
+      });
+    </script>
   </body>
 </html>
