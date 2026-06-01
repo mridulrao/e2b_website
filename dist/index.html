@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Personal Website</title>
+    <title>About | Mridul Rao</title>
     <meta
       name="description"
-      content="A simple personal blog website with recent posts, featured writing, and ways to connect."
+      content="About Mridul Rao, an AI engineer focused on real-time voice agents, LLM systems, and backend infrastructure."
     />
     <script>
       (() => {
@@ -26,7 +26,9 @@
       <nav class="site-nav">
         <span class="site-name">Mridul Rao</span>
         <div class="nav-actions">
-          <a href="#posts">Blog Posts</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#writing">Writing</a>
           <button
             class="theme-toggle"
             type="button"
@@ -38,11 +40,13 @@
         </div>
       </nav>
       <div class="hero-copy">
-        <p class="eyebrow">Voice AI Engineer</p>
-        <h1>Mridul Rao</h1>
+        <p class="eyebrow">AI Engineer</p>
+        <h1>Building real-time voice and agentic AI systems.</h1>
         <p class="intro">
-          USC graduate with an M.S. in Computer Science, building real-time AI
-          systems and voice experiences.
+          I am Mridul Rao, an AI engineer with a background in computer science and a
+          strong interest in voice AI, LLM systems, and production-ready backend
+          infrastructure. I enjoy building fast, reliable systems that make
+          human-AI interaction more useful in real-world settings.
         </p>
         <div class="social-links" aria-label="External profiles and writing">
           <a href="https://www.linkedin.com/in/mridul-rao/" target="_blank" rel="noreferrer"
@@ -51,58 +55,133 @@
           <a href="https://github.com/mridulrao" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://medium.com/@mridulrao674385" target="_blank" rel="noreferrer">Medium</a>
         </div>
-        <a class="button" href="#posts">Read the latest posts</a>
+        <a class="button" href="#about">Read my story</a>
       </div>
     </header>
 
     <main>
-      <section class="section" id="posts">
+      <section class="section" id="about">
         <div class="section-heading">
-          <p class="eyebrow">Recent writing</p>
-          <h2>Blog posts</h2>
+          <p class="eyebrow">About</p>
+          <h2>What I work on</h2>
           <p>
-            A simple list of featured posts that can grow into a full blog over
-            time.
+            My work sits at the intersection of machine learning, telephony,
+            scalable systems, and product-minded AI engineering.
+          </p>
+        </div>
+
+        <div class="content-grid">
+          <article class="post-card">
+            <h3>Voice and real-time AI</h3>
+            <p>
+              I build real-time voice AI agents and end-to-end pipelines across
+              SIP, speech-to-text, language models, and text-to-speech with a
+              strong focus on latency, reliability, and user experience.
+            </p>
+          </article>
+
+          <article class="post-card">
+            <h3>LLM systems</h3>
+            <p>
+              I work on agent architectures with function calling, retrieval,
+              memory, observability, and production deployment patterns for small
+              and large language models.
+            </p>
+          </article>
+
+          <article class="post-card">
+            <h3>Engineering mindset</h3>
+            <p>
+              I like combining practical ML with strong backend engineering,
+              whether that means GPU inference, system optimization, API design,
+              or building infrastructure that holds up in production.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2>A quick snapshot</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item post-card">
+            <p class="post-meta">Education</p>
+            <h3>University of Southern California</h3>
+            <p>
+              I completed my M.S. in Computer Science at USC after building my
+              foundation in computer science during my B.Tech. at Graphic Era
+              University.
+            </p>
+          </article>
+
+          <article class="timeline-item post-card">
+            <p class="post-meta">Experience</p>
+            <h3>Data Science Mentor at Devtown</h3>
+            <p>
+              I mentored students through data science workshops and helped shape
+              curriculum that stayed relevant to current industry needs.
+            </p>
+          </article>
+
+          <article class="timeline-item post-card">
+            <p class="post-meta">Publication</p>
+            <h3>Sentiment Analysis of User-Generated Data</h3>
+            <p>
+              I contributed to research presented at ICASIS 2023 on sentiment
+              analysis using a CNN-BiLSTM approach, reflecting my long-running
+              interest in applied machine learning and NLP.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="writing">
+        <div class="section-heading">
+          <p class="eyebrow">Writing</p>
+          <h2>Topics I write about</h2>
+          <p>
+            I regularly write to clarify my thinking and share practical lessons
+            from building AI systems.
           </p>
         </div>
 
         <div class="post-grid">
           <article class="post-card">
-            <p class="post-meta">May 2026 · Reflection</p>
-            <h3>Building a writing habit one note at a time</h3>
+            <p class="post-meta">Voice AI</p>
+            <h3>Telephony infrastructure for voice agents</h3>
             <p>
-              A short post about keeping a lightweight publishing routine and why
-              small posts still matter.
+              I write about the systems behind modern voice agents, from call
+              infrastructure to real-time communication patterns.
             </p>
-            <a href="#">Read post</a>
           </article>
 
           <article class="post-card">
-            <p class="post-meta">April 2026 · Projects</p>
-            <h3>What I learned from shipping tiny web experiments</h3>
+            <p class="post-meta">LLM Engineering</p>
+            <h3>Deploying and optimizing model stacks</h3>
             <p>
-              Notes on learning faster by making small, focused projects and
-              sharing the results in public.
+              I share notes on attention efficiency, model deployment, inference
+              tuning, and practical tradeoffs in production AI systems.
             </p>
-            <a href="#">Read post</a>
           </article>
 
           <article class="post-card">
-            <p class="post-meta">March 2026 · Notes</p>
-            <h3>Designing a personal site that stays easy to maintain</h3>
+            <p class="post-meta">Agents</p>
+            <h3>Observability, security, and RAG</h3>
             <p>
-              A practical look at why a simple static site can be the best home
-              for personal writing.
+              I explore how reliable agent systems depend on the surrounding
+              environment, guardrails, retrieval, and careful engineering.
             </p>
-            <a href="#">Read post</a>
           </article>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Simple Personal Website</p>
-      <p>Built as a minimal static website for blog content.</p>
+      <p>© 2026 Mridul Rao</p>
+      <p>Built as a minimal static website.</p>
     </footer>
 
     <script>
