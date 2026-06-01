@@ -28,6 +28,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -70,6 +74,7 @@ button {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .site-name {
@@ -97,7 +102,7 @@ button {
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .eyebrow {
@@ -184,11 +189,13 @@ h3 {
 }
 
 .section-heading {
-  max-width: 640px;
+  max-width: 680px;
   margin-bottom: 2rem;
 }
 
-.post-grid {
+.content-grid,
+.post-grid,
+.timeline {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
@@ -223,9 +230,5 @@ h3 {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 3rem;
-  }
-
-  .nav-actions {
-    flex-wrap: wrap;
   }
 }
